@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "seed-dev",
+    "prod": "seed-test"
+  }
+}
