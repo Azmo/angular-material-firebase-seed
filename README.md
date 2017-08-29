@@ -29,4 +29,10 @@ Get:
 click "Add Firebase to your web app", copy config and update firebaseConfig variable in app.module.ts
 * Search and replace all "seed" words in the project
 
+## Deploy to Firebase
+* `npm install -g firebase-tools`
+* `firebase login`
+* `firebase init`
+* `firebase deploy -P dev`
+
 ## Set up CI/CD
