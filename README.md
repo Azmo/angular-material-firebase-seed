@@ -33,6 +33,7 @@ click "Add Firebase to your web app", copy config and update firebaseConfig vari
 * `npm install -g firebase-tools`
 * `firebase login`
 * `firebase init`
+* `ng build -prod`
 * `firebase deploy -P dev`
 
 ## Set up CI/CD
