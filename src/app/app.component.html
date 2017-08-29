@@ -6,10 +6,10 @@
   <div class="button-row">
     <button *ngIf="!currentUserId" md-icon-button [mdMenuTriggerFor]="menu">Login</button>
     <button *ngIf="currentUserId" md-icon-button (click)="logout()">Log Out</button>
-    <button md-mini-fab mdTooltip="Help" routerLink="/Help">
+    <button md-icon-button mdTooltip="Help" routerLink="/Help">
       <md-icon>help</md-icon>
     </button>
-    <button md-mini-fab mdTooltip="Feedback" (click)="openFeedbackDialog()">
+    <button md-icon-button mdTooltip="Feedback" (click)="openFeedbackDialog()">
       <md-icon>feedback</md-icon>
     </button>
   </div>
