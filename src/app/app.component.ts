@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
       this.router.navigate([(localStorage.getItem('redirect') ? localStorage.getItem('redirect') : '/')]);
       this.currentUserId = auth.uid;
       this.currentUserName = auth.displayName;
-      this.currentUserEmail = auth.email;
+      this.currentUserEmail = (auth.email == null) ? auth.providerData[0].email : this.currentUserEmail = auth.email;
       const user = this.db.object(`/users/${this.currentUserId}`);
       user.subscribe((item) => {
         if (!item.$exists()) {
@@ -94,6 +94,7 @@ export class AppComponent implements OnInit {
 
   loginFacebook() {
     const provider = new firebase.auth.FacebookAuthProvider();
+    provider.addScope('email');
     this.afAuth.auth.signInWithPopup(provider);
   }
 
@@ -108,7 +109,7 @@ export class AppComponent implements OnInit {
   private createNewUser(user: firebase.User) {
     const userData = {
       displayName: user.displayName,
-      email: user.email,
+      email: this.currentUserEmail,
       phoneNumber: user.phoneNumber,
       photoURL: user.photoURL,
     };
