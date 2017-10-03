@@ -29,6 +29,10 @@ Get:
 click "Add Firebase to your web app", copy config and update firebaseConfig variable in app.module.ts
 * Search and replace all "seed" words in the project
 
+## Firebase
+We use [Firebase](https://firebase.google.com) for hosting, backend and database.
+[How to deploy Angular CLI apps to Firebase](https://coryrylan.com/blog/deploy-angular-cli-apps-to-firebase)
+
 ## Deploy to Firebase
 * `npm install -g firebase-tools`
 * `firebase login`
@@ -36,4 +40,18 @@ click "Add Firebase to your web app", copy config and update firebaseConfig vari
 * `ng build -prod`
 * `firebase deploy -P dev`
 
-## Set up CI/CD
+## Material Design
+We use [Angular Material](https://material.angular.io) to develop UI following [Material design guidelines](https://material.io/guidelines)
+[Material icons](https://material.io/icons)
+
+## Responsive layout
+[Angular Flex Layout](https://github.com/angular/flex-layout)
+[Layout Demos](https://tburleson-layouts-demos.firebaseapp.com/#/docs)
+
+## CI/CD
+We use [Travis CI](https://travis-ci.org) for continuous integration and deployment to Firebase.
+[Travis CI Firebase Deployment](https://docs.travis-ci.com/user/deployment/firebase/)
+
+## Further help
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
