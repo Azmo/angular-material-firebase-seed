@@ -8,7 +8,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Install [Node.js](https://nodejs.org/en/)
 * Install [git](https://git-scm.com/)
 
+In Command Prompt run:
 `npm install -g @angular/cli`
+`git config --global user.email "you@example.com"`
+`git config --global user.name "Your Name"`
+
+Navigate to your working folder and run:
+`git clone https://github.com/Azmo/angular-material-firebase-seed.git`
 
 ## Create new app on Facebook
 Get: 
