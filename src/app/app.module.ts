@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule, MdButtonModule, MdDialog, MdIconRegistry, MdInputModule, MdMenuModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
+import { MatButtonModule, MatDialog, MatIconRegistry, MatInputModule, MatMenuModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
@@ -44,20 +44,19 @@ export const firebaseConfig = {
     AppRouting,
     FormsModule,
     FlexLayoutModule,
-    MaterialModule,
-    MdInputModule,
-    MdToolbarModule,
-    MdButtonModule,
-    MdMenuModule,
-    MdTooltipModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatTooltipModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],
   providers: [
     AuthGuard,
-    MdIconRegistry,
-    MdDialog,
+    MatIconRegistry,
+    MatDialog,
   ],
   entryComponents: [FeedbackDialogComponent],
   bootstrap: [AppComponent],

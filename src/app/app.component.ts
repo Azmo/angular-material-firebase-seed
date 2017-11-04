@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MdDialog, MdDialogRef, MdIconRegistry, MdMenu, MdSnackBar } from '@angular/material';
+import { MatDialog, MatDialogRef, MatIconRegistry, MatMenu, MatSnackBar } from '@angular/material';
 import {
   ActivatedRouteSnapshot,
   Event as RouterEvent,
@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
   currentUserEmail: string;
   isLoading = true;
 
-  constructor(private afAuth: AngularFireAuth, public db: AngularFireDatabase, private router: Router, iconRegistry: MdIconRegistry, public dialog: MdDialog) {
+  constructor(private afAuth: AngularFireAuth, public db: AngularFireDatabase, private router: Router, iconRegistry: MatIconRegistry, public dialog: MatDialog) {
     localStorage.removeItem('currentUserId');
     localStorage.removeItem('currentUserName');
     this.currentUserId = null;
@@ -46,9 +46,9 @@ export class AppComponent implements OnInit {
       this.currentUserId = auth.uid;
       this.currentUserName = auth.displayName;
       this.currentUserEmail = (auth.email == null) ? auth.providerData[0].email : this.currentUserEmail = auth.email;
-      const user = this.db.object(`/users/${this.currentUserId}`);
+      const user = this.db.object(`/users/${this.currentUserId}`).valueChanges();
       user.subscribe((item) => {
-        if (!item.$exists()) {
+        if (!item) {
           this.createNewUser(auth);
         }
       });

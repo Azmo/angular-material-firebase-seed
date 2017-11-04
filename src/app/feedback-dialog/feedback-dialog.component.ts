@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MdDialog, MdDialogRef } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-feedback-dialog',
@@ -10,7 +10,7 @@ export class FeedbackDialogComponent implements OnInit {
 
   public feedback: any;
 
-  constructor(public feedbackDialog: MdDialogRef<FeedbackDialogComponent>) { }
+  constructor(public feedbackDialog: MatDialogRef<FeedbackDialogComponent>) { }
 
   ngOnInit() {
     this.feedback = {};

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MdDialogRef } from '@angular/material';
+import { MatDialogRef } from '@angular/material';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 
@@ -10,7 +10,7 @@ import * as firebase from 'firebase/app';
 
 export class LoginComponent {
 
-  constructor(public afAuth: AngularFireAuth, public dialogRef: MdDialogRef<LoginComponent>) { }
+  constructor(public afAuth: AngularFireAuth, public dialogRef: MatDialogRef<LoginComponent>) { }
 
   loginGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();

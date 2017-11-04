@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
 import 'rxjs/add/operator/first';
@@ -11,7 +11,7 @@ import { LoginComponent } from './login';
 export class AuthGuard implements CanActivate {
   public allowed: boolean;
 
-  constructor(private afAuth: AngularFireAuth, private router: Router, public dialog: MdDialog) {
+  constructor(private afAuth: AngularFireAuth, private router: Router, public dialog: MatDialog) {
     // this.af.auth.subscribe((auth) => console.log(auth));
   }
 
