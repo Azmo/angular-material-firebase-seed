@@ -18,6 +18,11 @@ Navigate to your working folder and run:
 ```
 git clone https://github.com/Azmo/angular-material-firebase-seed.git
 ```
+Go inside angular-material-firebase-seed folder and run
+```
+npm install
+ng build 
+```
 
 ## Create new app on Facebook
 Get: 
