@@ -1,38 +1,38 @@
-<md-toolbar color="primary">
-  <button md-button routerLink="/">
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/">
       {{title}}
   </button>
   <span class="fill-remaining-space"></span>
   <div class="button-row">
-    <button *ngIf="!currentUserId" md-icon-button mdTooltip="Login" [mdMenuTriggerFor]="loginmenu">
+    <button *ngIf="!currentUserId" mat-icon-button matTooltip="Login" [matMenuTriggerFor]="loginmenu">
       <i class="fa fa-sign-in" aria-hidden="true"></i>    
     </button>
-    <button *ngIf="currentUserId" md-button [mdMenuTriggerFor]="logoutmenu">{{currentUserName}}</button>
-    <button md-icon-button mdTooltip="Help" routerLink="/Help">
-      <md-icon>help</md-icon>
+    <button *ngIf="currentUserId" mat-button [matMenuTriggerFor]="logoutmenu">{{currentUserName}}</button>
+    <button mat-icon-button matTooltip="Help" routerLink="/Help">
+      <mat-icon>help</mat-icon>
     </button>
-    <button md-icon-button mdTooltip="Feedback" (click)="openFeedbackDialog()">
-      <md-icon>feedback</md-icon>
+    <button mat-icon-button matTooltip="Feedback" (click)="openFeedbackDialog()">
+      <mat-icon aria-label="Feedback">feedback</mat-icon>
     </button>
   </div>
-</md-toolbar>
+</mat-toolbar>
 
-<md-menu #loginmenu="mdMenu" id="login-menu">
-  <button md-menu-item (click)="loginGoogle()">
+<mat-menu #loginmenu="matMenu" id="login-menu">
+  <button mat-menu-item (click)="loginGoogle()">
     <i class="fa fa-google" aria-hidden="true"></i>
     <span>Google</span>
   </button>
-  <button md-menu-item (click)="loginFacebook()">
+  <button mat-menu-item (click)="loginFacebook()">
     <i class="fa fa-facebook" aria-hidden="true"></i>
     <span>Facebook</span>
   </button>
-</md-menu>
+</mat-menu>
 
-<md-menu #logoutmenu="mdMenu" id="logout-menu">
-  <button md-menu-item (click)="logout()">
+<mat-menu #logoutmenu="matMenu" id="logout-menu">
+  <button mat-menu-item (click)="logout()">
     <i class="fa fa-sign-out" aria-hidden="true"></i>
     <span>Sign Out</span>
   </button>
-</md-menu>
+</mat-menu>
 
 <router-outlet></router-outlet>
